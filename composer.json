@@ -1,0 +1,15 @@
+{
+    "name": "kawta/spotify",
+    "autoload": {
+        "psr-4": {
+            "Kawta\\Spotify\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Kawtar",
+            "email": "Kawtar.shaimi8@gmail.com"
+        }
+    ],
+    "require": {}
+}

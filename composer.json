@@ -2,7 +2,10 @@
     "name": "kawta/spotify",
     "autoload": {
         "psr-4": {
-            "Kawta\\Spotify\\": "src/"
+            "App\\Models\\": "Models/",
+            "App\\Controllers\\": "Controllers/",
+            "App\\Core\\": "Core/",
+            "App\\DB\\": "DB/"
         }
     },
     "authors": [

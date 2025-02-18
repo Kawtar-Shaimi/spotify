@@ -1,0 +1,18 @@
+- users (id, nom, email, password, role, created_at)
+- artistes (user_id, bio, verified)
+- chansons (id, titre, artiste_id, album_id, file_path, duration)
+- playlists (id, name, user_id, is_public, created_at)
+- playlist_songs (playlist_id, chanson_id, position)
+- liked_songs (user_id, chanson_id)
+- albums (id, titre, artiste_id, release_date)RewriteEngine On
+RewriteBase /spotify/
+
+# If the requested file or directory exists, serve it directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Otherwise, redirect all requests to index.php
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+
+# Prevent directory listing
+Options -Indexes
